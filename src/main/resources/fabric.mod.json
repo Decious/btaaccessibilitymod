@@ -1,32 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
-  "version": "${version}",
+  "id": "accessibilitymod",
+  "version": "1.0",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Accessibility mod",
+  "description": "Adds accessibility settings to 'Better than Adventure!'",
   "authors": [
-    "Turnip Labs"
+    "Decious_"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/Decious/btaaccessibilitymod"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+      "decious.accessibilitymod.AccessibilityMod"
+    ],
+    "client": [
+      "decious.accessibilitymod.AccessibilityModClient"
     ]
   },
   "mixins": [
-      "examplemod.mixins.json"
+      "accessibilitymod.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.3"
+    "fabricloader": ">=0.13.3",
+    "halplibe": ">=2.1.1"
   },
   "suggests": {
   }
