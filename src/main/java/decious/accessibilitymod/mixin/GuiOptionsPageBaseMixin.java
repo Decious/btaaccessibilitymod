@@ -7,7 +7,6 @@ import net.minecraft.client.gui.options.GuiOptionsPageBase;
 import net.minecraft.client.option.GameSettings;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -17,9 +16,9 @@ import java.util.Arrays;
 @Mixin(value= GuiOptionsPageBase.class, remap = false)
 public abstract class GuiOptionsPageBaseMixin{
 
-    @Shadow private static Class<? extends GuiOptionsPageBase>[] pages;
+    @Shadow static Class<? extends GuiOptionsPageBase>[] pages;
 
-    @Shadow private static String[] pageLanguageKeys;
+    @Shadow static String[] pageLanguageKeys;
 
     @Inject(method="<init>", at = @At("TAIL"))
     void GuiOptionsPageBase(GuiScreen parent, GameSettings settings, CallbackInfo ci) {
