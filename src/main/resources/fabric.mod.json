@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "accessibilitymod",
-  "version": "1.0",
+  "version": "1.0.0-bta1.7.7.0_02",
 
   "name": "Accessibility mod",
   "description": "Adds accessibility settings to 'Better than Adventure!'",
